@@ -125,6 +125,19 @@ TWILIO_PHONE_NUMBER=your-twilio-phone-number
    1. Change sms sending time `21:00` to another time that you want from AppServiceProvider.php file
    ` $schedule->command('vaccine:reminder')->dailyAt('21:00');`
    2. run `php artisan schedule:run` command. 
+7. You can setup email configuration at https://mailtrap.io/
+    configuration demo
+
+```php
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=                // you may get when create an account at mailtrap.io
+MAIL_PASSWORD=                 // password also get from mailtrap.io 
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="no-reply@covidvaccination.com"
+MAIL_FROM_NAME="${APP_NAME}"
+```
 
 
 ## Note
